@@ -11,6 +11,9 @@ class Arco < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
+    # Rename binary to arco for consistency
+    mv bin/"arcorrust", bin/"arco"
+
     # Install documentation
     doc.install "README.md" if File.exist?("README.md")
     doc.install "ARCORRUST.md" if File.exist?("ARCORRUST.md")
@@ -18,6 +21,6 @@ class Arco < Formula
 
   test do
     # Basic test - check that binary runs
-    assert_match "arcorrust", shell_output("#{bin}/arcorrust --help 2>&1", 1) rescue true
+    assert_match "arco", shell_output("#{bin}/arco --help 2>&1", 1) rescue true
   end
 end
