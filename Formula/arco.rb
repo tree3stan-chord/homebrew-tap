@@ -1,8 +1,8 @@
 class Arco < Formula
   desc "Terminal-based virtual instrument playground with real-time synthesis"
   homepage "https://github.com/tree3stan-chord/arcorrust"
-  url "https://github.com/tree3stan-chord/arcorrust/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "d858f056be92054e901a09297d070a5b9e454ba6b060a06348c03300d6b66b61"
+  url "https://github.com/tree3stan-chord/arcorrust/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "2922592ba3d42d56c341d29d56200b4cfd5b69cd0a31da4de963ff5eba3ed4b1"
   license "MIT"
   head "https://github.com/tree3stan-chord/arcorrust.git", branch: "trunk"
 
@@ -11,12 +11,8 @@ class Arco < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    # Rename binary to arco for consistency
-    mv bin/"arcorrust", bin/"arco"
-
     # Install documentation
     doc.install "README.md" if File.exist?("README.md")
-    doc.install "ARCORRUST.md" if File.exist?("ARCORRUST.md")
   end
 
   test do
