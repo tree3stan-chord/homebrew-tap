@@ -2,7 +2,7 @@ class Arco < Formula
   desc "Terminal-based virtual instrument playground with real-time synthesis"
   homepage "https://github.com/tree3stan-chord/arcorrust"
   url "https://github.com/tree3stan-chord/arcorrust/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "2922592ba3d42d56c341d29d56200b4cfd5b69cd0a31da4de963ff5eba3ed4b1"
+  sha256 "adf05a11a134ac74dec04f848e4dc02c852ad9d61f2ade4a2e450e819e62fcaa"
   license "MIT"
   head "https://github.com/tree3stan-chord/arcorrust.git", branch: "trunk"
 
